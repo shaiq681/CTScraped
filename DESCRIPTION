@@ -1,0 +1,31 @@
+Package: CTScraper
+Title: A Package for scraping CT.gov trials
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Shahrukh",
+           family = "Iqbal",
+           role = c("aut", "cre"),
+           email = "shaiq681@student.liu.se",
+           comment = c(LiUID = "shaiq681")),
+           person(given = "Mowniesh",
+           family = "Asokan",
+           role = c("aut"),
+           email = "mowas455@student.liu.se",
+           comment = c(LiUID = "mowas455")))
+Description: The Package scrapes CT.gov trials based on queries. The scraping is in realtime. 
+  The return-type is a dataframe that can be used for future Analytics.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    glue,
+    httr,
+    jsonlite,
+    dplyr
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

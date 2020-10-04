@@ -1,0 +1,40 @@
+---
+title: "CTScraper"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CTScraper}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CTScraper)
+```
+
+# Introduction
+
+The current package scrapes trial data from ct.gov website using the [Study Fields API](https://clinicaltrials.gov/api/gui/demo/simple_study_fields)
+
+
+# Download Trials Data
+
+- To download data, just enter the query.
+
+```{r, eval=F}
+
+data_cancer <- download_clinical_trials(search_query = 'cancer')
+```
+
+- The function can implement complex queries:
+```{r, eval=F}
+
+data_covid<- download_clinical_trials(search_query = 'covid19 AND (sars OR mars)')
+
+```
